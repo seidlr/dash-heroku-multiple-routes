@@ -1,0 +1,11 @@
+gunicorn>=19.7.1
+plotly>=2.0.9
+
+git+https://github.com/plotly/dash.git
+dash-renderer
+dash-html-components==0.7.0
+dash-core-components
+
+
+
+
