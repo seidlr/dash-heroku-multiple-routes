@@ -65,7 +65,11 @@ first_page = html.Div(children=[
                 'title': 'Dash Data Visualization'
             }
         }
-    )
+    ),
+    html.Br(),
+    dcc.Link('Go to Page 2', href='/second'),
+    html.Br(),
+    dcc.Link('Go back to home', href='/')
 ])
 
 second_page = html.Div([
@@ -77,7 +81,11 @@ second_page = html.Div([
         value=df['year'].min(),
         step=None,
         marks={str(year): str(year) for year in df['year'].unique()}
-    )
+    ),
+    html.Br(),
+    dcc.Link('Go to Page 1', href='/first'),
+    html.Br(),
+    dcc.Link('Go back to home', href='/')
 ])
 
 @app.callback(
@@ -133,4 +141,4 @@ app.css.append_css({
 
 # Run the Dash app
 if __name__ == '__main__':
-    app.server.run(debug=True, threaded=True)
+    app.server.run(threaded=True)
