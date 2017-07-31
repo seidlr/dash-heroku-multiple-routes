@@ -1,5 +1,6 @@
 # dash-heroku-multiple-routes
 Boilerplate code for a deployment-ready dash app with multiple routes and scikit-learn through anaconda environment.
+If you do not need scikit-learn and the anaconda environment, simply do not add the buildpack and delete ```conda-requirements.txt```.
 
 ## Python 3.5 version
 
